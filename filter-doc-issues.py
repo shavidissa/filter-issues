@@ -18,6 +18,7 @@ keyword_dict = {}
 df = pd.DataFrame(zendesk_df, columns = ['DESCRIPTION','URL'])
 #It is easier to filter out content when all the test are in lowercase. Therefore, make sure the description column is in lowercase.
 df_lower = df['DESCRIPTION'].str.lower()
+
 #Filter out the rows where the description has any of the keywords.
 for index, desc in df_lower.items():
     for keyword in keywords:
