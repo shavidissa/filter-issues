@@ -26,7 +26,7 @@ for index, desc in df_lower.items():
             if index not in filtered_url:
                 #Write the data to the dictionary you created above.
                 keyword_dict[index] = desc
-                # Pass the dictionary data to a datafram so you can write into a new CSV file.
+                # Pass the dictionary data to a dataframe so you can write into a new CSV file.
                 filtered_list = pd.DataFrame.from_dict(keyword_dict, orient='index', columns=['Description'])
                 filtered_list.to_csv(path_or_buf="filtered_issues.csv")
             break
